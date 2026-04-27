@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_primary"
+    android:orientation="vertical"
+    android:padding="36dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TV Sideloader — Cursor + Rotación"
+        android:textColor="@color/text_primary"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="4dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Instala apps de móvil y contrólalas con el mando en tu Google TV"
+        android:textColor="@color/text_secondary"
+        android:textSize="16sp"
+        android:layout_marginBottom="20dp" />
+
+    <!-- ── Paso 1: Cursor virtual ──────────────────────────────────── -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_card"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="16dp"
+        android:layout_marginBottom="8dp">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Paso 1 — Cursor virtual (Accesibilidad)"
+                android:textColor="@color/text_secondary" android:textSize="13sp"/>
+            <TextView android:id="@+id/tv_cursor_status"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:textSize="17sp" android:textStyle="bold" android:text="Comprobando..."/>
+        </LinearLayout>
+        <Button android:id="@+id/btn_enable_cursor"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="ACTIVAR" android:backgroundTint="@color/accent"
+            android:textColor="@color/white" android:textSize="14sp" android:focusable="true"/>
+    </LinearLayout>
+
+    <!-- ── Paso 2: Ventana flotante ───────────────────────────────── -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_card"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="16dp"
+        android:layout_marginBottom="8dp">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Paso 2 — Ventana flotante (para mostrar el cursor)"
+                android:textColor="@color/text_secondary" android:textSize="13sp"/>
+            <TextView android:id="@+id/tv_overlay_status"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:textSize="17sp" android:textStyle="bold" android:text="Comprobando..."/>
+        </LinearLayout>
+        <Button android:id="@+id/btn_overlay_perm"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Conceder" android:backgroundTint="@color/bg_secondary"
+            android:textColor="@color/text_primary" android:textSize="14sp" android:focusable="true"/>
+    </LinearLayout>
+
+    <!-- ── Paso 3: Instalar APKs ──────────────────────────────────── -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_card"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="16dp"
+        android:layout_marginBottom="8dp">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Paso 3 — Instalar APKs de origen desconocido"
+                android:textColor="@color/text_secondary" android:textSize="13sp"/>
+            <TextView android:id="@+id/tv_install_status"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:textSize="17sp" android:textStyle="bold" android:text="Comprobando..."/>
+        </LinearLayout>
+        <Button android:id="@+id/btn_install_perm"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Conceder" android:backgroundTint="@color/bg_secondary"
+            android:textColor="@color/text_primary" android:textSize="14sp" android:focusable="true"/>
+    </LinearLayout>
+
+    <!-- ── Paso 4: Rotación ───────────────────────────────────────── -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_card"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="16dp"
+        android:layout_marginBottom="20dp">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Paso 4 — Rotación de pantalla (para apps portrait)"
+                android:textColor="@color/text_secondary" android:textSize="13sp"/>
+            <TextView android:id="@+id/tv_rotation_status"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:textSize="17sp" android:textStyle="bold" android:text="Comprobando..."/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Permite que el botón ⟳ del cursor cambie la orientación del TV"
+                android:textColor="@color/text_secondary" android:textSize="12sp"
+                android:layout_marginTop="2dp"/>
+        </LinearLayout>
+        <Button android:id="@+id/btn_rotation_perm"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Conceder" android:backgroundTint="@color/bg_secondary"
+            android:textColor="@color/text_primary" android:textSize="14sp" android:focusable="true"/>
+    </LinearLayout>
+
+    <!-- Botón principal -->
+    <Button
+        android:id="@+id/btn_installer"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:text="Abrir instalador de APKs  →"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/accent"
+        android:focusable="true"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Referencia de controles -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_card"
+        android:padding="14dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CONTROLES (activos sobre cualquier app)"
+            android:textColor="@color/accent_light"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.1"
+            android:layout_marginBottom="6dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="D-pad = mover cursor  |  OK = tap  |  OK largo = menú contextual\n◀◀ = scroll arriba  |  ▶▶ = scroll abajo  |  Menú = ocultar/mostrar cursor\nBotón ⟳ (esquina sup. der.) = cambiar rotación:  AUTO → LANDSCAPE → LANDSCAPE 180° → PORTRAIT\nTecla Info/Amarilla = cambiar rotación directamente desde el mando"
+            android:textColor="@color/text_secondary"
+            android:textSize="13sp"
+            android:lineSpacingMultiplier="1.5" />
+    </LinearLayout>
+
+</LinearLayout>

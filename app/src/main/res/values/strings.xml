@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TV Sideloader</string>
+    <string name="cursor_service_label">TV Sideloader — Cursor Virtual</string>
+    <string name="cursor_service_description">Convierte el D-pad del mando en un cursor táctil para usar apps de móvil en tu Google TV sin necesidad de pantalla táctil.</string>
+</resources>

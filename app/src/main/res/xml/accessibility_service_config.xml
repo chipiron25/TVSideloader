@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Configuracion del servicio de accesibilidad (cursor virtual + rotacion).
+
+    Flags clave:
+      flagRequestFilterKeyEvents   -> interceptar teclas del mando (D-pad, OK, etc.)
+      flagRetrieveInteractiveWindows -> acceso a ventanas interactivas
+    canPerformGestures="true"      -> necesario para dispatchGesture() (simular toques)
+    canRequestFilterKeyEvents="true" -> necesario para onKeyEvent()
+    packageNames vacio             -> actua sobre TODAS las apps instaladas
+-->
+<accessibility-service
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:description="@string/cursor_service_description"
+    android:accessibilityFlags="flagRequestFilterKeyEvents|flagRetrieveInteractiveWindows"
+    android:accessibilityEventTypes="typeAllMask"
+    android:accessibilityFeedbackType="feedbackAllMask"
+    android:notificationTimeout="100"
+    android:canPerformGestures="true"
+    android:canRequestFilterKeyEvents="true" />
